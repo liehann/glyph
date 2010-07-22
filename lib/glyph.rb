@@ -1,14 +1,26 @@
 
 module Glyph
-  def self.initialize_application()
+  def self.application=(app)
+    @application = app
   end
 
   def self.application()
-    @@application
+    @application
   end
 end
 
+require 'glyph/cursor'
+require 'glyph/position'
+require 'glyph/ncurses/window'
+require 'glyph/document'
 require 'glyph/application'
+require 'glyph/ncurses/gui'
+require 'glyph/keys'
+require 'glyph/input_handler'
+require 'glyph/commands/quit_command'
+require 'glyph/commands/append_command'
+require 'glyph/launcher'
 
-Glyph.initialize_application()
+launcher = Glyph::Launcher.new(ARGV)
+launcher.launch_application
 
