@@ -1,0 +1,8 @@
+Glyph aims to be programmers text editor written in ruby.
+Key features are:
+ - modal editing (vim style key bindings)
+ - REPL (full domain exposed for manipulation inside editor)
+ - standard stuff like syntax highlighting
+ - some level of formatting and auto-indent
+ - code parsing allowing intellisense like features
+
